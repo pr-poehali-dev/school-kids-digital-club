@@ -44,9 +44,16 @@ const Contacts = () => {
     {
       icon: 'MapPin',
       title: 'Адрес',
-      value: 'г. Москва, ул. Примерная, д. 123',
+      value: 'г. Сосновоборск (Красноярский край)',
       link: 'https://maps.google.com',
       color: 'accent',
+    },
+    {
+      icon: 'User',
+      title: 'Учитель',
+      value: 'Десятова И.С.',
+      link: '#',
+      color: 'primary',
     },
   ];
 
@@ -65,7 +72,7 @@ const Contacts = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {contacts.map((contact, index) => (
               <a key={index} href={contact.link} target="_blank" rel="noopener noreferrer">
                 <Card className="border-2 hover:border-primary transition-all hover:shadow-xl h-full">
@@ -147,7 +154,7 @@ const Contacts = () => {
                   <div className="p-6">
                     <h3 className="font-bold text-2xl mb-4">Приходи к нам в гости!</h3>
                     <p className="text-muted-foreground mb-4">
-                      Мы находимся в самом центре города. У нас современные классы, мощные
+                      Наш клуб находится в городе Сосновоборске Красноярского края. У нас современные классы, мощные
                       компьютеры и дружелюбная атмосфера!
                     </p>
                     <div className="space-y-3">
@@ -163,8 +170,15 @@ const Contacts = () => {
                         <div>
                           <p className="font-medium">Адрес</p>
                           <p className="text-sm text-muted-foreground">
-                            г. Москва, ул. Примерная, д. 123
+                            г. Сосновоборск (Красноярский край)
                           </p>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <Icon name="User" size={20} className="text-primary" />
+                        <div>
+                          <p className="font-medium">Учитель</p>
+                          <p className="text-sm text-muted-foreground">Десятова И.С.</p>
                         </div>
                       </div>
                     </div>
